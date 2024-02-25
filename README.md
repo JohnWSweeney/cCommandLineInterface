@@ -3,5 +3,9 @@
 C language template for entering commands.
 
 ## ChangeLog
+v0.0.1
+- Added command line input.
+- Updated ssl print, added clear function.
+
 v0.0.0
 - Initial commit.

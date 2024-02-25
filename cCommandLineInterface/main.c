@@ -1,21 +1,23 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include <string.h>
 #include "singlyLinkedList.h"
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.0\n\n");
+	printf("cCommandLineInterface v0.0.1\n\n");
 
+	int result = 0;
 	struct node* list = NULL;
-	char one[123] = "one";
-	char two[123] = "two";
-	char three[123] = "three";
-	char four[123] = "four";
+	char input[123];
+	fgets(input, sizeof(input), stdin);
+	printf("%s\n", input);
 
-	addBack(&list, one);
-	addBack(&list, two);
-	addBack(&list, three);
-	addBack(&list, four);
-	print(list);
+	char* token = strtok(input, " ");
+	while (token)
+	{
+		addBack(&list, token);
+		token = strtok(NULL, " ");
+	}
+	result = print(list);
+	printf("result: %d\n", result); 
 }

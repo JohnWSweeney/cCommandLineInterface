@@ -33,15 +33,28 @@ int addBack(struct node** list, char* command)
 	}
 }
 
+int clear(struct node**list)
+{
+	if (*list == NULL) return 1; // list is empty.
+
+	while (*list != NULL)
+	{
+		struct node* dummy = *list;
+		*list = dummy->next;
+		free(dummy);
+	}
+	return 0;
+}
+
 int print(struct node* list)
 {
-	if (list == NULL) return 1; // list is empty,
+	if (list == NULL) return 1; // list is empty.
 
+	printf("cmd:\tcurr:\t\t\tnext:\n");
 	while (list != NULL)
 	{
-		printf("%s\t", list->command);
+		printf("%s\t%p\t%p\n", list->command, list, list->next);
 		list = list->next;
 	}
 	printf("\n");
-	return 0;
 }
