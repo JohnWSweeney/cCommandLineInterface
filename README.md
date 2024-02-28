@@ -2,7 +2,13 @@
 
 C language template for entering commands.
 
+Known Issues:
+- Tokenize function does not ignore spaces at end of line.
+
 ## ChangeLog
+v0.0.3
+- Replaced strtok with hand rolled tokenize function.
+
 v0.0.2
 - Added getCommands function.
 
