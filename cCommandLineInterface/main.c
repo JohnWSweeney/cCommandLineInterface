@@ -5,7 +5,9 @@ void getCommands(struct node** list)
 {
 	// get input.
 	char str[123];
-	fgets(str, sizeof(str), stdin);
+	do {
+		fgets(str, sizeof(str), stdin);
+	} while (str[0] == '\n');
 
 	// tokenize input.
 	int i = 0;
@@ -20,6 +22,7 @@ void getCommands(struct node** list)
 		}
 		else if (str[i] == ' ')
 		{
+			temp[j] = '\0';
 			addBack(list, temp);
 			memset(temp, 0, sizeof(temp));
 			j = 0;
@@ -31,12 +34,9 @@ void getCommands(struct node** list)
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.3\n\n");
+	printf("cCommandLineInterface v0.0.4\n\n");
 
-	int result = 0;
 	struct node* list = NULL;
-	
 	getCommands(&list);
-	result = print(list);
-	printf("result: %d\n", result);
+	print(list);
 }

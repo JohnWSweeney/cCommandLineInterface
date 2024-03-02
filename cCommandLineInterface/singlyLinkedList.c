@@ -57,4 +57,5 @@ int print(struct node* list)
 		list = list->next;
 	}
 	printf("\n");
+	return 0;
 }
