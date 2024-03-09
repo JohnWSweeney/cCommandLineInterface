@@ -50,10 +50,10 @@ int print(struct node* list)
 {
 	if (list == NULL) return 1; // list is empty.
 
-	printf("cmd:\tcurr:\t\t\tnext:\n");
+	printf("cmd:\t\tcurr:\t\t\tnext:\n");
 	while (list != NULL)
 	{
-		printf("%s\t%p\t%p\n", list->command, list, list->next);
+		printf("%s\t\t%p\t%p\n", list->command, list, list->next);
 		list = list->next;
 	}
 	printf("\n");
