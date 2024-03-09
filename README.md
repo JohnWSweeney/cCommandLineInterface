@@ -6,6 +6,9 @@ Known Issues:
 - Tokenize function does not ignore spaces at end of line.
 
 ## ChangeLog
+v0.0.6
+- Updated init, addBack functions with malloc error checks.
+
 v0.0.5
 - Testing Git branching: updated print function tab spacing.
 

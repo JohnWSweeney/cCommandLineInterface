@@ -34,7 +34,7 @@ void getCommands(struct node** list)
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.5\n\n");
+	printf("cCommandLineInterface v0.0.6\n\n");
 
 	struct node* list = NULL;
 	getCommands(&list);
