@@ -3,14 +3,14 @@
 
 int checkExit(struct node* list)
 {
-	if (list->command == "exit")
+	int result = strcmp(list->command, "exit");
+	if (result == 0)
 	{
-		printf("beep.\n");
-		return 1;
+		return 0;
 	}
 	else
 	{
-		return 0;
+		return 1;
 	}
 }
 

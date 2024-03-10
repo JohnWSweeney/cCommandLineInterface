@@ -4,7 +4,7 @@
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.8\n\n");
+	printf("cCommandLineInterface v0.0.9\n\n");
 
 	int running = 1;
 	struct node* list = NULL;
