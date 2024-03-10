@@ -20,15 +20,15 @@ void getCommands(struct node** list)
 	do {
 		clear(list); // clear previous commands.
 		// get input.
-		char str[123];
+		char str[123]; // input string.
 		do {
 			fgets(str, sizeof(str), stdin);
 		} while (str[0] == '\n');
 
 		// tokenize input.
-		int i = 0;
-		int j = 0;
-		char temp[123];
+		int i = 0; // input string index.
+		int j = 0; // temp string index.
+		char temp[123]; // temp string.
 		while (str[i] != '\0')
 		{
 			if (str[i] != ' ' && str[i] != '\n')
@@ -45,6 +45,7 @@ void getCommands(struct node** list)
 			}
 			++i;
 		}
+		temp[j] = '\0';
 		addBack(list, temp);
 		result = isEmpty(list);
 	} while (result);

@@ -6,6 +6,9 @@ Known Issues:
 - Tokenize function does not ignore spaces at end of line.
 
 ## ChangeLog
+v0.0.10
+- Updated getCommands to add NULL character to final node.
+
 v0.0.9
 - Updated exit command with strcmp.
 
