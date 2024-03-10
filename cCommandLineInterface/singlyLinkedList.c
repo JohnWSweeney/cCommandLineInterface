@@ -50,7 +50,7 @@ int addBack(struct node** list, char* command)
 	}
 }
 
-int clear(struct node**list)
+int clear(struct node** list)
 {
 	if (*list == NULL) return 1; // list is empty.
 
@@ -61,6 +61,12 @@ int clear(struct node**list)
 		free(dummy);
 	}
 	return 0;
+}
+
+int isEmpty(struct node* list)
+{
+	if (list == NULL) return 1;
+	else return 0;
 }
 
 int print(struct node* list)

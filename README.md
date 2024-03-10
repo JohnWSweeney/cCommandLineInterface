@@ -6,6 +6,10 @@ Known Issues:
 - Tokenize function does not ignore spaces at end of line.
 
 ## ChangeLog
+v0.0.7
+- Added isEmpty function, list empty check to getCommands.
+- Added commands .h/.c files.
+
 v0.0.6
 - Updated init, addBack functions with malloc error checks.
 
