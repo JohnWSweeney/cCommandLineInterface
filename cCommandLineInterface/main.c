@@ -4,9 +4,15 @@
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.6\n\n");
+	printf("cCommandLineInterface v0.0.8\n\n");
 
+	int running = 1;
 	struct node* list = NULL;
-	getCommands(&list);
-	print(list);
+	while (running)
+	{
+		getCommands(&list);
+		print(list);
+		running = checkExit(list);
+	}
+	printf("Closing CLI.\n");
 }

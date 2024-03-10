@@ -1,4 +1,18 @@
 #include "commands.h"
+#include "singlyLinkedList.h"
+
+int checkExit(struct node* list)
+{
+	if (list->command == "exit")
+	{
+		printf("beep.\n");
+		return 1;
+	}
+	else
+	{
+		return 0;
+	}
+}
 
 void getCommands(struct node** list)
 {
