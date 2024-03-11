@@ -16,9 +16,8 @@ int checkExit(struct node* list)
 
 void getCommands(struct node** list)
 {
-	int result = 0;
 	do {
-		clear(list); // clear previous commands.
+		clear(list); // clear linked list.
 		// get input.
 		char str[123]; // input string.
 		do {
@@ -47,6 +46,5 @@ void getCommands(struct node** list)
 		}
 		temp[j] = '\0';
 		addBack(list, temp);
-		result = isEmpty(list);
-	} while (result);
+	} while (isEmpty(list));
 }
