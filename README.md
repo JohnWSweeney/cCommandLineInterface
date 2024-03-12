@@ -6,6 +6,10 @@ Known Issues:
 - Tokenize function does not ignore spaces at end of line.
 
 ## ChangeLog
+v0.0.12
+- Added size function to list files.
+- Added stringCompare function to command files.
+
 v0.0.11
 - Updated getCommands while loop condition.
 

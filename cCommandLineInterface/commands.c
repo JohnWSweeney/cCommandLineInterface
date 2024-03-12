@@ -14,6 +14,22 @@ int checkExit(struct node* list)
 	}
 }
 
+int stringCompare(char* strA, char* strB)
+{
+	if (strA[0] == '\0' || strB[0] == '\0') return 1; // one or more strings null.
+
+	int i = 0;
+	while (strA[i] != '\0' && strB[i] != '\0')
+	{
+		if (strA[i] != strB[i])
+		{
+			return -1;
+		}
+		++i;
+	}
+	return 0;
+}
+
 void getCommands(struct node** list)
 {
 	do {

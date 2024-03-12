@@ -69,6 +69,19 @@ int isEmpty(struct node* list)
 	else return 0;
 }
 
+int size(struct node* list, int* nodeCount)
+{
+	if (list == NULL) return 1; // list is empty.
+
+	*nodeCount = 0;
+	while (list != NULL)
+	{
+		list = list->next;
+		++*nodeCount;
+	}
+	return 0;
+}
+
 int print(struct node* list)
 {
 	if (list == NULL) return 1; // list is empty.

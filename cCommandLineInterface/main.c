@@ -4,7 +4,7 @@
 
 int main()
 {
-	printf("cCommandLineInterface v0.0.11\n\n");
+	printf("cCommandLineInterface v0.0.12\n\n");
 
 	int running = 1;
 	struct node* list = NULL;
@@ -12,7 +12,7 @@ int main()
 	{
 		getCommands(&list);
 		print(list);
-		running = checkExit(list);
+		running = stringCompare(list->command, "exit");
 	}
 	printf("Closing CLI.\n");
 }

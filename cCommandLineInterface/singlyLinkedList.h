@@ -12,4 +12,5 @@ int init(struct node** list, char* command);
 int addBack(struct node** list, char* command);
 int clear(struct node** list);
 int isEmpty(struct node* list);
+int size(struct node* list, int* nodeCount);
 int print(struct node* list);
